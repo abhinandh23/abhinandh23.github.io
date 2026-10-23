@@ -20,7 +20,9 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ========== NAV ========== -->
-  <header class="nav" id="top">
+  <!-- No id="top" here: with no such element, "#top" links scroll to the very top of the page.
+       Putting it on this sticky header made those links move only by the scroll-padding offset. -->
+  <header class="nav">
     <div class="nav__inner container">
       <a class="nav__brand" href="#top" aria-label="Abhinandh Rajeev — back to top">
         <span class="nav__mark" aria-hidden="true">A</span>
