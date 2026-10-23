@@ -68,54 +68,47 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="label">// portfolio — v2026.10</p>
+          <p class="label">#0 Abhinandh Rajeev — CS @ IIIT Kottayam</p>
           <h1 class="display hero__title" id="hero-title">
             <span>The Engineer</span>
             <span>That Ships</span>
-            <span>In <mark>Real Time</mark></span>
+            <span>In Real Time</span>
           </h1>
-          <p class="hero__sub mono">
-            Abhinandh Rajeev — B.Tech CSE @ IIIT Kottayam<br>
-            Full-stack · AI agents · Machine learning
-          </p>
+
           <div class="hero__ctas">
-            <a class="btn btn--primary" href="#projects">
+            <a class="btn" href="#projects">
+              <svg class="icon icon--blue" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
               View projects
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" /></svg>
             </a>
-            <a class="btn btn--secondary" href="resume.pdf" download="Abhinandh_Rajeev_Resume.pdf">
-              Download resume
+            <a class="btn btn--alt" href="resume.pdf" download="Abhinandh_Rajeev_Resume.pdf">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-5-5m5 5l5-5M5 20h14" /></svg>
+              Download resume
             </a>
           </div>
-        </div>
 
-        <div class="terminal reveal" aria-label="Terminal introduction">
-          <div class="terminal__bar">
-            <div class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></div>
-            <div class="terminal__tabs" role="tablist" aria-label="Terminal views">
-              <button class="terminal__tab" role="tab" aria-selected="true" data-tab="about">:about:</button>
-              <button class="terminal__tab" role="tab" aria-selected="false" data-tab="stack">:stack:</button>
-              <button class="terminal__tab" role="tab" aria-selected="false" data-tab="now">:now:</button>
+          <p class="label hero__term-label">Reach me via terminal</p>
+          <div class="term">
+            <div class="term__tabs" role="tablist" aria-label="Contact method">
+              <button class="term__tab" role="tab" aria-selected="true"
+                data-cmd="mail abinandh.rajeev@gmail.com" data-copy="abinandh.rajeev@gmail.com">Email</button>
+              <button class="term__tab" role="tab" aria-selected="false"
+                data-cmd="open https://github.com/abhinandh23" data-copy="https://github.com/abhinandh23">GitHub</button>
+              <button class="term__tab" role="tab" aria-selected="false"
+                data-cmd="open https://linkedin.com/in/abhinandh-rajeev-0a765628a" data-copy="https://www.linkedin.com/in/abhinandh-rajeev-0a765628a/">LinkedIn</button>
+            </div>
+            <div class="term__line">
+              <code id="term-cmd">mail abinandh.rajeev@gmail.com</code>
+              <button class="term__copy" type="button" data-copy="abinandh.rajeev@gmail.com" aria-label="Copy to clipboard">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1" /><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" /></svg>
+                <span class="term__copy-text">copy</span>
+              </button>
             </div>
           </div>
-          <pre class="terminal__body" aria-live="polite"><code id="terminal-output">$ whoami
-abhinandh rajeev — cs undergrad, iiit kottayam</code></pre>
-          <div class="terminal__copy">
-            <code><span class="prompt">$</span> mail abinandh.rajeev@gmail.com</code>
-            <button class="copy-btn" type="button" data-copy="abinandh.rajeev@gmail.com" aria-label="Copy email address">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" /><path d="M16 8V4H4v12h4" /></svg>
-              <span class="copy-btn__text">copy</span>
-            </button>
-          </div>
         </div>
-      </div>
 
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker__track">
-          <span>React</span><span>Django</span><span>Django Channels</span><span>WebSockets</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span><span>GitHub Actions</span><span>LangGraph</span><span>Gemini API</span><span>TensorFlow</span><span>OpenCV</span><span>C++</span><span>Python</span>
-          <span>React</span><span>Django</span><span>Django Channels</span><span>WebSockets</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span><span>GitHub Actions</span><span>LangGraph</span><span>Gemini API</span><span>TensorFlow</span><span>OpenCV</span><span>C++</span><span>Python</span>
-        </div>
+        <figure class="hero__art">
+          <canvas class="dither" data-art="hero" role="img" aria-label="Engraving-style illustration: an AR monogram inside a burst of light rays"></canvas>
+        </figure>
       </div>
     </section>
 
