@@ -485,3 +485,80 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .hero__art { max-width: 520px; width: 100%; margin-inline: auto; }
 }
 
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+.section {
+  padding-block: clamp(72px, 10vw, 132px);
+  border-top: 1px solid var(--line);
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: clamp(40px, 6vw, 72px);
+  font-size: clamp(56px, 8vw, 104px);
+}
+.section-title__glyph {
+  position: absolute;
+  top: 0.08em;
+  right: -0.6em;
+  color: var(--blue-ink);
+  font-family: var(--font-sans);
+  font-size: 0.24em;
+}
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: start;
+}
+
+.about__bio {
+  color: var(--text-2);
+  font-size: clamp(19px, 1.8vw, 24px);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.edu__list { margin-top: 16px; }
+.edu__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.edu__item:last-child { border-bottom: 1px solid var(--line); }
+.edu__school { font-size: 17px; font-weight: 500; line-height: 1.35; }
+.edu__detail { margin-top: 4px; font-size: 15px; color: var(--muted); }
+.edu__date { font-size: 12.5px; white-space: nowrap; color: var(--muted); padding-top: 3px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: clamp(56px, 8vw, 96px);
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.stat dd {
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 200;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
