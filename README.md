@@ -1,6 +1,8 @@
 # Abhinandh Rajeev — Portfolio
 
-A static, dependency-free portfolio site whose design takes inspiration from [Hermes Agent](https://hermes-agent.nousresearch.com/): electric blue `#0000f2` on paper, condensed display type, mono `// labels` and numbered cards.
+My personal portfolio, live at **https://abhinandh23.github.io**.
+
+A static, dependency-free site: electric blue `#0000f2` on paper, condensed display type, mono `// labels` and numbered cards.
 
 ```
 index.html   content and markup
