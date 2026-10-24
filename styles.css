@@ -774,3 +774,64 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .skills { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* ==========================================================================
+   Leadership
+   ========================================================================== */
+.lead {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: clamp(16px, 4vw, 48px);
+  padding-block: 32px;
+  border-block: 1px solid var(--line);
+}
+.lead .label { padding-top: 10px; }
+.lead__role { font-size: clamp(34px, 3.6vw, 50px); }
+.lead__org { margin-top: 10px; color: var(--muted); font-family: var(--font-mono); font-size: 13px; }
+.lead__desc { margin-top: 16px; max-width: 68ch; color: var(--text-2); font-size: 17px; }
+
+@media (max-width: 700px) {
+  .lead { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+.contact__title {
+  margin-bottom: clamp(40px, 6vw, 72px);
+  font-size: clamp(68px, 12.5vw, 184px);
+  font-weight: 200;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.contact__list { border-top: 1px solid var(--line); }
+
+.contact__row {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 14px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.contact__value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 300;
+  line-height: 1.1;
+}
+.contact__arrow { width: 26px; height: 26px; transition: transform 0.25s var(--ease); }
+
+.contact__row:hover { background: var(--blue); }
+.contact__row:hover .label { color: var(--text); }
+.contact__row:hover .contact__arrow { transform: translate(3px, -3px); }
+
+@media (max-width: 640px) {
+  .contact__row { grid-template-columns: minmax(0, 1fr) auto; row-gap: 6px; }
+  .contact__row .label { grid-column: 1 / -1; }
+}
+
