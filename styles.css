@@ -727,3 +727,50 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .features { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* ==========================================================================
+   Skills — pricing-table style tiers
+   ========================================================================== */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.skill {
+  padding: 24px 22px 28px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg-2);
+}
+
+.skill__name {
+  margin: 12px 0 22px;
+  font-size: clamp(30px, 2.6vw, 38px);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chips li {
+  padding: 4px 9px;
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.skill--featured { background: var(--blue); border-color: var(--blue); }
+.skill--featured .label { color: var(--text); }
+.skill--featured .chips li { background: rgba(242, 242, 242, 0.14); color: var(--text); }
+
+@media (max-width: 1000px) {
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .skills { grid-template-columns: minmax(0, 1fr); }
+}
+
