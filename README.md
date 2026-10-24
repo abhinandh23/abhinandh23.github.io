@@ -2,12 +2,12 @@
 
 My personal portfolio, live at **https://abhinandh23.github.io**.
 
-A static, dependency-free site: electric blue `#0000f2` on paper, condensed display type, mono `// labels` and numbered cards.
+A static, dependency-free site: dark navy with electric-blue `#0000f2` accents, light condensed display type, mono `#labels`, and dithered artwork drawn in the browser on `<canvas>`.
 
 ```
 index.html   content and markup
 styles.css   design tokens, layout, responsive and reduced-motion rules
-script.js    terminal typewriter, scroll reveal, copy button, mobile nav
+script.js    dithered artwork, contact terminal, scroll reveal, nav behaviour
 resume.pdf   downloadable resume
 ```
 
