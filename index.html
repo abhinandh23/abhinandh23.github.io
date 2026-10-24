@@ -157,91 +157,91 @@
     </section>
 
     <!-- ========== PROJECTS ========== -->
-    <section class="band" id="projects" aria-labelledby="projects-title">
+    <section class="section" id="projects" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-head reveal">
-          <p class="label">// 002 — selected work</p>
-          <h2 class="display section-title" id="projects-title">Projects</h2>
+        <h2 class="display section-title reveal" id="projects-title">Projects<span class="section-title__glyph" aria-hidden="true">✳</span></h2>
+
+        <div class="features">
+          <!-- #1 -->
+          <article class="feature reveal">
+            <p class="label feature__label">#1 Collaborate · May 2026 <span class="live"><span class="live__dot" aria-hidden="true"></span>Live</span></p>
+            <h3 class="display feature__title">Collaborative Workspace</h3>
+            <p class="feature__text">A real-time collaborative IDE: co-edit code, chat live over WebSockets and run it in a locked-down sandbox.</p>
+            <a class="feature__art" href="https://collaborative-workspace-five.vercel.app/login" target="_blank" rel="noopener noreferrer" aria-label="Open the Collaborative Workspace live demo">
+              <canvas class="dither" data-art="workspace" role="img" aria-label="Duotone illustration of two cursors editing code together"></canvas>
+            </a>
+            <div class="feature__foot">
+              <p class="tags"><span class="tag">React</span><span class="tag">Django Channels</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></p>
+              <div class="feature__links">
+                <a class="link" href="https://collaborative-workspace-five.vercel.app/login" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+                <a class="link" href="https://github.com/abhinandh23/CollaborativeWorkspace" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              </div>
+              <details class="more">
+                <summary>Details</summary>
+                <ul class="more__list">
+                  <li>React + Monaco Editor front end with Django Channels; edits synced across server processes through a Redis channel layer.</li>
+                  <li>Root-caused recurring WebSocket drops to a Redis client timeout and fixed it.</li>
+                  <li>Python, C++ and JavaScript run in isolated Docker containers with no network and capped CPU/memory.</li>
+                  <li>DRF APIs with Google OAuth 2.0 + JWT; 59 Jest and 76 pytest tests (≥95% coverage) on every push via GitHub Actions; Render Blueprint infra, Vercel front end.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+
+          <!-- #2 -->
+          <article class="feature reveal">
+            <p class="label feature__label">#2 Automate · Jan 2026</p>
+            <h3 class="display feature__title">Email Automation Agent</h3>
+            <p class="feature__text">Mailoo turns a plain-English request into personalised, tone-aware emails for each recipient, with a human approving before send.</p>
+            <a class="feature__art" href="https://github.com/abhinandh23/Mailoo" target="_blank" rel="noopener noreferrer" aria-label="Open the Mailoo repository on GitHub">
+              <canvas class="dither" data-art="mailoo" role="img" aria-label="Duotone illustration of an agent pipeline flowing into an envelope"></canvas>
+            </a>
+            <div class="feature__foot">
+              <p class="tags"><span class="tag">React</span><span class="tag">Django</span><span class="tag">LangGraph</span><span class="tag">Gemini API</span><span class="tag">PostgreSQL</span></p>
+              <div class="feature__links">
+                <a class="link" href="https://github.com/abhinandh23/Mailoo" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              </div>
+              <details class="more">
+                <summary>Details</summary>
+                <ol class="flow" aria-label="LangGraph workflow">
+                  <li>fetch contacts</li><li>analyze intent</li><li>clarify</li><li>compose</li><li>preview</li><li>send</li>
+                </ol>
+                <ul class="more__list">
+                  <li>Three services (React front end, Django REST back end, LangGraph agent server), with Django proxying agent runs and forwarding the user's JWT so the agent only sees that user's contacts.</li>
+                  <li>Matches recipients by relation and adapts tone per contact, with thread-based conversation state.</li>
+                  <li>JWT-secured DRF endpoints plus Gmail API integration over OAuth 2.0.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+
+          <!-- #3 -->
+          <article class="feature reveal">
+            <p class="label feature__label">#3 Verify · Nov 2025</p>
+            <h3 class="display feature__title">Signature Verification</h3>
+            <p class="feature__text">A Siamese CNN that learns 4096-dimensional embeddings to tell genuine signatures from forgeries — 93% accuracy, 0.93 F1.</p>
+            <a class="feature__art" href="https://github.com/abhinandh23/Signature_Verification_Using_Siamese_CNN" target="_blank" rel="noopener noreferrer" aria-label="Open the Signature Verification repository on GitHub">
+              <canvas class="dither" data-art="signature" role="img" aria-label="Duotone illustration of two matching signatures under a starburst"></canvas>
+            </a>
+            <div class="feature__foot">
+              <p class="tags"><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Python</span></p>
+              <div class="feature__links">
+                <a class="link" href="https://github.com/abhinandh23/Signature_Verification_Using_Siamese_CNN" target="_blank" rel="noopener noreferrer">Source ↗</a>
+              </div>
+              <details class="more">
+                <summary>Details</summary>
+                <ul class="more__list">
+                  <li>3.3M-parameter shared-weight encoder in TensorFlow/Keras.</li>
+                  <li>OpenCV preprocessing with CLAHE contrast enhancement.</li>
+                  <li>Trained on 23,206 signature pairs with binary cross-entropy and Adam; evaluated on 5,748 pairs.</li>
+                </ul>
+              </details>
+            </div>
+          </article>
         </div>
 
-        <ol class="projects">
-          <!-- #01 -->
-          <li class="project reveal">
-            <div class="project__meta">
-              <span class="project__num display">#01</span>
-              <span class="project__date mono">May 2026</span>
-              <span class="badge"><span class="badge__dot" aria-hidden="true"></span>live</span>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Collaborative Developer Workspace</h3>
-              <p class="project__lede">A real-time collaborative IDE — co-edit code, chat live and run it in a sandbox.</p>
-              <ul class="project__points">
-                <li>React + Monaco Editor front end with Django Channels over WebSockets; edits synced across server processes through a Redis channel layer.</li>
-                <li>Root-caused recurring WebSocket drops to a Redis client timeout and fixed it.</li>
-                <li>Python, C++ and JavaScript execute in isolated Docker containers — no network, CPU and memory capped.</li>
-                <li>Secure DRF APIs with Google OAuth 2.0 + JWT; 59 Jest and 76 pytest tests (≥95% coverage) on every push via GitHub Actions; Render Blueprint infra + Vercel front end.</li>
-              </ul>
-              <p class="tags"><span class="label">// stack</span> <span class="tag">React</span><span class="tag">Django Channels</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></p>
-              <div class="project__links">
-                <a class="link-btn" href="https://collaborative-workspace-five.vercel.app/login" target="_blank" rel="noopener noreferrer">Live demo <span aria-hidden="true">↗</span></a>
-                <a class="link-btn" href="https://github.com/abhinandh23/CollaborativeWorkspace" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </li>
-
-          <!-- #02 -->
-          <li class="project reveal">
-            <div class="project__meta">
-              <span class="project__num display">#02</span>
-              <span class="project__date mono">Jan 2026</span>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Email Automation Agent <span class="project__alias mono">(mailoo)</span></h3>
-              <p class="project__lede">Turns a plain-English request into personalised, tone-aware emails for each recipient.</p>
-              <ol class="flow" aria-label="LangGraph workflow">
-                <li><span>fetch contacts</span></li><li><span>analyze intent</span></li><li><span>clarify</span></li><li><span>compose</span></li><li><span>preview</span></li><li><span>send</span></li>
-              </ol>
-              <ul class="project__points">
-                <li>Three services — React front end, Django REST back end, LangGraph agent server — with Django proxying agent runs and forwarding the user's JWT so the agent only sees that user's contacts.</li>
-                <li>Matches recipients by relation, adapts tone per contact, and keeps a human in the loop to approve before sending.</li>
-                <li>JWT-secured DRF endpoints plus Gmail API integration over OAuth 2.0.</li>
-              </ul>
-              <p class="tags"><span class="label">// stack</span> <span class="tag">React</span><span class="tag">Django</span><span class="tag">LangGraph</span><span class="tag">Gemini API</span><span class="tag">PostgreSQL</span><span class="tag">Gmail API</span></p>
-              <div class="project__links">
-                <a class="link-btn" href="https://github.com/abhinandh23/Mailoo" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </li>
-
-          <!-- #03 -->
-          <li class="project reveal">
-            <div class="project__meta">
-              <span class="project__num display">#03</span>
-              <span class="project__date mono">Nov 2025</span>
-            </div>
-            <div class="project__body">
-              <h3 class="project__title">Signature Verification — Siamese CNN</h3>
-              <p class="project__lede">Offline signature verification with a shared-weight encoder that learns 4096-dimensional embeddings.</p>
-              <dl class="metrics">
-                <div><dt class="mono">params</dt><dd class="display">3.3M</dd></div>
-                <div><dt class="mono">train pairs</dt><dd class="display">23,206</dd></div>
-                <div><dt class="mono">accuracy</dt><dd class="display">93%</dd></div>
-                <div><dt class="mono">F1</dt><dd class="display">0.93</dd></div>
-              </dl>
-              <ul class="project__points">
-                <li>OpenCV preprocessing with CLAHE contrast enhancement before the twin encoder.</li>
-                <li>Trained with binary cross-entropy and Adam; evaluated on 5,748 held-out pairs.</li>
-              </ul>
-              <p class="tags"><span class="label">// stack</span> <span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">OpenCV</span><span class="tag">Python</span></p>
-              <div class="project__links">
-                <a class="link-btn" href="https://github.com/abhinandh23/Signature_Verification_Using_Siamese_CNN" target="_blank" rel="noopener noreferrer">Source <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </li>
-        </ol>
-
-        <p class="more reveal">
-          <a class="link-btn" href="https://github.com/abhinandh23" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a>
+        <p class="more-link reveal">
+          <a class="link" href="https://github.com/abhinandh23" target="_blank" rel="noopener noreferrer">More on GitHub ↗</a>
         </p>
       </div>
     </section>
