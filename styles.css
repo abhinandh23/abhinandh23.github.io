@@ -882,3 +882,27 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+/* ==========================================================================
+   Scroll reveal (only hidden once JS has confirmed it can show it again)
+   ========================================================================== */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .live__dot { animation: none; }
+  *,
+  *::before,
+  *::after { transition-duration: 0.01ms !important; }
+}
